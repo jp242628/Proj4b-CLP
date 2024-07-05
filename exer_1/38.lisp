@@ -16,3 +16,5 @@
     ((eql n 1) 1)                          ; caso base: retorna 1 se n for igual a 1
     ((evenp n) (- (serieH (- n 1)) (/ (potencia n n) (fatorial n)))) ; se n é par
     (t (+ (serieH (- n 1)) (/ (potencia n n) (fatorial n))))))       ; se n é ímpar
+   
+    (print (serieH 7)) ; Imprime o resultado

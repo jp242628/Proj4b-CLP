@@ -9,7 +9,7 @@
 (defun testar-precisao-seriePI (max-n tolerancia)
     (loop for n from 1 to max-n
         do (let* ((valor-lisp (seriePI n))
-                    (valor-java java:Math.PI) ; supondo que esteja usando uma biblioteca Java
+                    (valor-java java:Math.PI) ; usando uma biblioteca Java
                     (diferenca (abs (- valor-lisp valor-java))))
                 (format t "n: ~d, valor Lisp: ~a, valor Java: ~a, diferença: ~a~%"
                         n valor-lisp valor-java diferenca))

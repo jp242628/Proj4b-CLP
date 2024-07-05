@@ -8,7 +8,7 @@
 (defun testar-precisao-raiz (a max-n tolerancia)
     (loop for n from 1 to max-n
         do (let* ((valor-lisp (raiz a n))
-                    (valor-java (java:Math.sqrt a)) ; supondo que esteja usando uma biblioteca Java
+                    (valor-java (java:Math.sqrt a)) ; usando uma biblioteca Java
                     (diferenca (abs (- valor-lisp valor-java))))
                 (format t "n: ~d, valor Lisp: ~a, valor Java: ~a, diferença: ~a~%"
                         n valor-lisp valor-java diferenca))

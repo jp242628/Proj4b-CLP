@@ -16,3 +16,5 @@
     ((eql n 1) 1)                          ; caso base: retorna 1 se n for igual a 1
     ((evenp n) (- (serieG (- n 1)) (/ n (fatorial (fibonacci n))))) ; se n é par
     (t (+ (serieG (- n 1)) (/ n (fatorial (fibonacci n)))))))       ; se n é ímpar
+
+(print (serieG 5)) ; Imprime o resultado da função

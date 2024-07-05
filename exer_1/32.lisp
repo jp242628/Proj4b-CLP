@@ -15,3 +15,5 @@
     ((< n 0) nil)             ; retorna nil se n for negativo
     ((zerop n) 1)             ; caso base: retorna 1 se n for zero
     (t (+ (/ (power x n) (factorial n)) (ex x (- n 1)))))) ; recursão: power(x, n)/factorial(n) + ex(x, n-1)
+
+(format t "Para n=4 e x=2: ~d~%" (ex 2 4))

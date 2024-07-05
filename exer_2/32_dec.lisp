@@ -20,7 +20,7 @@
 (defun testar-precisao-ex (x max-n tolerancia)
     (loop for n from 1 to max-n
         do (let* ((valor-lisp (ex x n))
-                    (valor-java (java:Math.exp x)) ; supondo que esteja usando uma biblioteca Java
+                    (valor-java (java:Math.exp x)) ;usando uma biblioteca Java
                     (diferenca (abs (- valor-lisp valor-java)))
                     (diferenca-relativa (/ diferenca (abs valor-java))))
                 (format t "n: ~d, valor Lisp: ~a, valor Java: ~a, diferença relativa: ~a~%"
